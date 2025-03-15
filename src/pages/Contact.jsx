@@ -28,26 +28,21 @@ function Contact() {
                 </my-contact>
             </address>
 
-            <form id="contact-form" action="https://formspree.io/f/mwpvbryr" method="POST" noValidate>
+            <form id="contact-form" action="https://formspree.io/f/mwpvbryr" method="POST">
                 <fieldset className="form-field">
                     <label htmlFor="name">Name<span className="required-indicator">*</span></label>
                     <input type="text" id="name" name="name" required minLength="2" maxLength="50" placeholder="Enter your name" />
-                    <output id="name-error" className="error-message hidden"></output>
                 </fieldset>
                 
                 <fieldset className="form-field">
                     <label htmlFor="email">Email<span className="required-indicator">*</span></label>
                     <input type="email" id="email" name="email" required maxLength="100" placeholder="Enter your email" />
-                    <output id="email-error" className="error-message hidden"></output>
                 </fieldset>
 
                 <fieldset className="form-field">
                     <label htmlFor="comments">Comments<span className="required-indicator">*</span></label>
                     <textarea id="comments" name="comments" rows="5" required minLength="10" maxLength="300" placeholder="Your message here..."></textarea>
-                    <output id="comments-info"><span id="char-counter"></span> / 300</output>
                 </fieldset>
-
-                <input type="hidden" id="bot-field" name="possible_bot" value="true" />
 
                 <button type="submit" className="btn">Send Message</button>
             </form>

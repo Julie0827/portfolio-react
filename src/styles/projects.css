@@ -58,7 +58,7 @@
     flex-direction: column;
 }
 
-project-card {
+.project {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,11 +67,11 @@ project-card {
     border-bottom: 2px solid var(--main-color-light);
 }
 
-project-card:first-child {
+.project:first-child {
     border-top: 2px solid var(--main-color-light);
 }
 
-project-card ul {
+.project ul {
     display: flex;
     gap: 1rem;
     font-size: 0.8rem;
@@ -79,7 +79,7 @@ project-card ul {
     margin-top: -1.5rem;
 }
 
-project-card ul li {
+.project ul li {
     border-radius: 999px;
     padding: 0.5rem 1rem;
 }
@@ -117,13 +117,13 @@ project-card ul li {
     background-position: center;
 }
 
-project-card picture {
+.project picture {
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
-project-card picture img {
+.project picture img {
     width: 70%;
 }
 
@@ -136,7 +136,7 @@ project-card picture img {
 }
 
 @media (max-width: 1000px) {
-    project-card picture img {
+    .project picture img {
         width: 90%;
     }
 }
@@ -146,7 +146,7 @@ project-card picture img {
         align-self: center;
     }
 
-    project-card picture img {
+    .project picture img {
         width: 90%;
     }
 }
