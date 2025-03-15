@@ -1,6 +1,9 @@
 import { Link, NavLink } from "react-router-dom";
+import { useDropdownToggle } from '../scripts/main';
 
 function Header() {
+    const { isDropdownOpen, toggleDropdown } = useDropdownToggle();
+
     return (
         <header>
             <nav className="main-nav">
@@ -25,7 +28,12 @@ function Header() {
                 </NavLink>
 
                 <input type="text" className="search-box" placeholder="Search..." />
-                <img className="dropdown-nav-btn" src="/assets/images/hamburger.svg" alt="Open navigation menu" />
+                <img
+                    className="dropdown-nav-btn"
+                    src={isDropdownOpen ? '/assets/images/x.svg' : '/assets/images/hamburger.svg'}
+                    alt={isDropdownOpen ? 'Close navigation menu' : 'Open navigation menu'}
+                    onClick={toggleDropdown}
+                />
             </nav>
             <div className="setting">
                 <audio controls loop>
@@ -52,7 +60,7 @@ function Header() {
                     <img src="/assets/images/search-not-found.png" alt="3D illustration of a bored girl sitting cross-legged with a laptop on her lap" />
                 </div>
             </aside>
-            <nav className="dropdown-nav hide">
+            <nav className={`dropdown-nav ${isDropdownOpen ? '' : 'hide'}`}>
                 <NavLink to="/" className={({ isActive }) => (isActive ? "dropdown-nav-link active" : "dropdown-nav-link")}>
                 Home
                 </NavLink>
