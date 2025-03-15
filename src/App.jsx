@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
@@ -19,6 +20,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<Custom404 />} />
         </Routes>
+        <Footer />
         </Router>
     );
 }
