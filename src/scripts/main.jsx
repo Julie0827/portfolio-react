@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 export function useDropdownToggle() {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -41,4 +41,24 @@ export function useAudioControl() {
         iconRef,
         playPauseBtnRef
     };
+}
+
+export function useDarkMode() {
+    const [isDarkMode, setIsDarkMode] = useState(localStorage.getItem('darkMode') === 'enabled');
+
+    useEffect(() => {
+        if (isDarkMode) {
+            document.documentElement.classList.add('dark-mode');
+        } else {
+            document.documentElement.classList.remove('dark-mode');
+        }
+
+        localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
+    }, [isDarkMode]);
+
+    const toggleDarkMode = () => {
+        setIsDarkMode(prevState => !prevState);
+    };
+
+    return { isDarkMode, toggleDarkMode };
 }

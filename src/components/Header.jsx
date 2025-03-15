@@ -1,9 +1,10 @@
 import { Link, NavLink } from "react-router-dom";
-import { useDropdownToggle, useAudioControl } from '../scripts/main';
+import { useDropdownToggle, useAudioControl, useDarkMode } from '../scripts/main';
 
 function Header() {
     const { isDropdownOpen, toggleDropdown } = useDropdownToggle();
     const { isPlaying, toggleAudio, audioRef, iconRef, playPauseBtnRef } = useAudioControl();
+    const { isDarkMode, toggleDarkMode } = useDarkMode();
 
     return (
         <header>
@@ -53,12 +54,14 @@ function Header() {
                 />
                 </button>
 
-                <div className="toggle-container" title="Switch to Dark Mode">
-                <div className="inner-container">
-                    <div className="circle"></div>
-                    <div className="circle"></div>
-                    <div className="circle sun-moon"></div>
-                </div>
+                <div className="toggle-container"
+                    title={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+                    onClick={toggleDarkMode}>
+                    <div className="inner-container">
+                        <div className="circle"></div>
+                        <div className="circle"></div>
+                        <div className="circle sun-moon"></div>
+                    </div>
                 </div>
             </div>
             <aside className="search-sidebar">
