@@ -1,8 +1,9 @@
 import { Link, NavLink } from "react-router-dom";
-import { useDropdownToggle } from '../scripts/main';
+import { useDropdownToggle, useAudioControl } from '../scripts/main';
 
 function Header() {
     const { isDropdownOpen, toggleDropdown } = useDropdownToggle();
+    const { isPlaying, toggleAudio, audioRef, iconRef, playPauseBtnRef } = useAudioControl();
 
     return (
         <header>
@@ -36,13 +37,20 @@ function Header() {
                 />
             </nav>
             <div className="setting">
-                <audio controls loop>
-                <source src="assets/audio/background_audio.mp3" type="audio/mpeg" />
+                <audio ref={audioRef} controls loop>
+                <source src="/assets/audio/background_audio.mp3" type="audio/mpeg" />
                 Sorry, your browser doesn't support this audio.
                 </audio>
-                <button className="play-pause-btn" title="Play Music">
-                <img className="music-background" src="assets/images/music-background.svg" alt="Stars forming a circular pattern" />
-                <img className="play-pause-icon" src="assets/images/play.svg" alt="Play Icon" />
+                <button className="play-pause-btn"
+                        title={isPlaying ? 'Pause Music' : 'Play Music'}
+                        onClick={toggleAudio}
+                        ref={playPauseBtnRef}>
+                <img className="music-background" src="/assets/images/music-background.svg" alt="Stars forming a circular pattern" />
+                <img className="play-pause-icon"
+                    src={isPlaying ? '/assets/images/pause.svg' : '/assets/images/play.svg'}
+                    alt={isPlaying ? 'Pause Icon' : 'Play Icon'}
+                    ref={iconRef}
+                />
                 </button>
 
                 <div className="toggle-container" title="Switch to Dark Mode">
