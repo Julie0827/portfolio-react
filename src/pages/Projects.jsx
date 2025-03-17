@@ -25,7 +25,7 @@ function Projects() {
                 </section>
                 <section id="project2" class="project">
                     <h2>PnutOS</h2>
-                    <a class="repo-btn" href="https://github.com/Julie0827/pnut-operating-system" target="_blank">GitHub Repository</a>
+                    <a class="repo-btn" href="https://github.com/Julie0827/temporary" target="_blank">GitHub Repository</a>
                     <picture>
                         <source srcSet="../assets/images/project2L.png" media="(min-width: 1000px)" />
                         <img src="../assets/images/project2M.png" alt="PnutOS Welcome Screen" />
@@ -35,7 +35,7 @@ function Projects() {
                 </section>
                 <section id="project3" class="project">
                     <h2>Avovision</h2>
-                    <a class="repo-btn" href="https://github.com/Julie0827/avovision" target="_blank">GitHub Repository</a>
+                    <a class="repo-btn" href="https://github.com/Julie0827/temporary" target="_blank">GitHub Repository</a>
                     <picture>
                         <source srcSet="../assets/images/project3L.jpg" media="(min-width: 1000px)" />
                         <img src="../assets/images/project3M.jpg" alt="Avocado Tree Predictions Bounding Boxes" />
@@ -55,7 +55,7 @@ function Projects() {
                 </section>
                 <section id="project5" class="project">
                     <h2>2048 AI</h2>
-                    <a class="repo-btn" href="https://github.com/Julie0827/cse150b-pa2" target="_blank">GitHub Repository</a>
+                    <a class="repo-btn" href="https://github.com/Julie0827/temporary" target="_blank">GitHub Repository</a>
                     <picture>
                         <source srcSet="../assets/images/project5L.png" media="(min-width: 1000px)" />
                         <img src="../assets/images/project5M.png" alt="Screenshot of the 2048 game reaching the 2048 tile" />
@@ -65,7 +65,7 @@ function Projects() {
                 </section>
                 <section id="project6" class="project">
                     <h2>Gomoku AI</h2>
-                    <a class="repo-btn" href="https://github.com/Julie0827/cse150b-pa4" target="_blank">GitHub Repository</a>
+                    <a class="repo-btn" href="https://github.com/Julie0827/temporary" target="_blank">GitHub Repository</a>
                     <picture>
                         <source srcSet="../assets/images/project6L.png" media="(min-width: 1000px)" />
                         <img src="../assets/images/project6M.png" alt="Screenshot of the final results of a Gomoku match" />
